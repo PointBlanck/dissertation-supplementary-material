@@ -15,14 +15,32 @@
 <div class="stars"></div>
 
 <header>
-  <h1>Supplementary Material</h1>
+  <div class="eyebrow">Supplementary Material</div>
+  <h1>Galactic Dynamics &amp; Chaos</h1>
   <p>A gallery of additional figures produced during this work and omitted from the main text — orbital diagnostics, phase-space structure, and the fingerprints of chaotic motion. Click any figure to view it enlarged.</p>
-  <div class="orbit" aria-hidden="true">
-    <div class="ring"></div>
-    <div class="ring r2"></div>
-    <div class="ring r3"></div>
-    <div class="core"></div>
-    <div class="planet"></div>
+  <div class="galaxy" aria-hidden="true">
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#fff"/>
+          <stop offset="30%" stop-color="#ffe6c4"/>
+          <stop offset="70%" stop-color="#ffb454"/>
+          <stop offset="100%" stop-color="transparent"/>
+        </radialGradient>
+        <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="rgba(199,125,255,0.25)"/>
+          <stop offset="60%" stop-color="rgba(111,177,255,0.10)"/>
+          <stop offset="100%" stop-color="transparent"/>
+        </radialGradient>
+      </defs>
+      <g class="galaxy-spin">
+        <circle cx="100" cy="100" r="95" fill="url(#halo)"/>
+        <!-- spiral arms: four logarithmic arms of scattered stars -->
+        <g class="arms" fill="#dce6ff"></g>
+        <!-- bright core -->
+        <circle cx="100" cy="100" r="15" fill="url(#coreGlow)"/>
+      </g>
+    </svg>
   </div>
 </header>
 
